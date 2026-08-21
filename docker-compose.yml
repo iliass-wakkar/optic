@@ -1,0 +1,11 @@
+﻿services:
+  postgres:
+    container_name: optic-db
+    image: postgres:15-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: optical_catalog
+    ports:
+      - "5434:5432"

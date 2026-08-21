@@ -37,14 +37,17 @@ NEXTAUTH_URL="http://localhost:3001"
 ## Base de données
 
 ```bash
+# Démarrer PostgreSQL (Docker)
+npm run db:up
+
 # Générer le client Prisma
-pnpm db:generate
+npm run db:generate
 
 # Lancer les migrations
-pnpm db:migrate
+npm run db:migrate
 
 # Peupler la base
-pnpm db:seed
+npm run db:seed
 ```
 
 ## Développement
